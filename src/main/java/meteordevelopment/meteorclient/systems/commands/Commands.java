@@ -47,6 +47,7 @@ public class Commands extends System<Commands> {
         add(new DropCommand());
         add(new EnchantCommand());
         add(new FakePlayerCommand());
+        add(new FixLOCommand());
         add(new FriendsCommand());
         add(new CommandsCommand());
         add(new InventoryCommand());
@@ -73,6 +74,7 @@ public class Commands extends System<Commands> {
         add(new FOVCommand());
         add(new RotationCommand());
         add(new WaypointCommand());
+        add(new MoveCommand());
 
         commands.sort(Comparator.comparing(Command::getName));
     }

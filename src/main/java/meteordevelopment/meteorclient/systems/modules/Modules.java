@@ -556,10 +556,13 @@ public class Modules extends System<Modules> {
         add(new BetterChat());
         add(new BetterTab());
         add(new BookBot());
+        add(new BotMovement());
         add(new DiscordPresence());
+        add(new EventlessMove());
         add(new MessageAura());
         add(new MiddleClickFriend());
         add(new NameProtect());
+        add(new NoDemo());
         add(new Notebot());
         add(new Notifier());
         add(new PacketCanceller());

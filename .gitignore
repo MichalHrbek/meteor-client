@@ -15,3 +15,5 @@ logs
 .idea/*
 !.idea/copyright/*
 !.idea/scopes/*
+meteor-client_client.launch
+meteor-client_server.launch

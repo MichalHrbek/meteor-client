@@ -5,6 +5,7 @@
 
 package meteordevelopment.meteorclient.systems.modules.misc;
 import meteordevelopment.meteorclient.events.packets.PacketEvent;
+import meteordevelopment.meteorclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.orbit.EventHandler;
@@ -21,9 +22,15 @@ public class NoDemo extends Module {
             if (packet.getReason() == GameStateChangeS2CPacket.DEMO_MESSAGE_SHOWN || packet.getReason() == GameStateChangeS2CPacket.GAME_WON) {
                 event.setCancelled(true);
             }
+        }
+    }
+    @EventHandler
+    private void onTick(TickEvent.Post event) {
+        if (mc.world.getWorldBorder().getCenterX() != 0 || mc.world.getWorldBorder().getCenterZ() != 0 || mc.interactionManager.getCurrentGameMode() != GameMode.SURVIVAL) {
             mc.world.getWorldBorder().setSize(5.9999968E7);
             mc.world.getWorldBorder().setCenter(0, 0);
             mc.interactionManager.setGameMode(GameMode.SURVIVAL);
         }
     }
+
 }

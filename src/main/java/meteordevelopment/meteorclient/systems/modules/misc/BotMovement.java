@@ -26,7 +26,8 @@ public class BotMovement extends Module {
             packet.x = Math.nextAfter(x, x + Math.signum(x));
             double z = round(packet.z, 2);
             packet.z = Math.nextAfter(z, z + Math.signum(z));
-        } else if (event.packet instanceof VehicleMoveC2SPacket packet) {
+        }
+        if (event.packet instanceof VehicleMoveC2SPacket packet) {
             double x = round(packet.x, 2);
             packet.x = Math.nextAfter(x, x + Math.signum(x));
             double z = round(packet.z, 2);

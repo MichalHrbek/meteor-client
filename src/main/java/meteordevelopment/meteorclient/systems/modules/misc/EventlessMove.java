@@ -27,7 +27,7 @@ public class EventlessMove extends Module {
 
     @EventHandler
     public void onKey(KeyEvent event) {
-        if (Modules.get().get(Freecam.class).isActive()) {
+        if (!Modules.get().get(Freecam.class).isActive()) {
             if (Input.isKeyPressed(GLFW.GLFW_KEY_F3)) return;
 
             boolean cancel = true;
